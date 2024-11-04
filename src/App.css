@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #24282d; /* Colore di sfondo leggero */
+  margin: 0;
+  padding: 20px;
+  color: #333; /* Colore del testo principale */
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 700px; /* Larghezza massima del contenitore */
+  margin: 0 auto; /* Centrato orizzontalmente */
+  background: #353535; /* Sfondo bianco per il contenuto */
+  border-radius: 10px; /* Angoli arrotondati */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra per profondità */
+  padding: 20px; /* Padding interno */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1 {
+  color: #b12417; /* Colore del titolo */
+  font-size: 80px; /* Dimensione del titolo */
+  text-align: center; /* Centrato */
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #9d9d9d; /* Colore dei sottotitoli */
+  font-size: 1.8rem; /* Dimensione dei sottotitoli */
+  margin-top: 20px; /* Margine superiore */
+  margin-bottom: 10px; /* Margine inferiore */
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #444; /* Colore dei titoli delle traduzioni */
+  font-size: 1.5rem; /* Dimensione dei titoli delle traduzioni */
+  margin-top: 15px; /* Margine superiore */
+}
+
+textarea {
+  width: 666px; /* Larghezza completa */
+  padding: 15px; /* Padding interno */
+  border: 1px solid #ccc; /* Bordo grigio */
+  border-radius: 5px; /* Angoli arrotondati */
+  resize: none; /* Disabilita il ridimensionamento */
+  font-size: 1rem; /* Dimensione del font */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombra per il textarea */
+  margin-bottom: 15px;
+}
+
+
+/* CSS */
+button{
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: #9d9d9d;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 900px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 150px;
+  margin-top: 15px;
+  padding: 10px;
+  padding-left: 70px;
+  padding-right: 70px;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 50px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #000000; /* Colore al passaggio del mouse */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+pre {
+  background-color: #f8f9fa; /* Colore di sfondo per il blocco di codice */
+  padding: 15px; /* Padding interno */
+  border: 1px solid #ddd; /* Bordo grigio chiaro */
+  border-radius: 5px; /* Angoli arrotondati */
+  overflow: auto; /* Scroll orizzontale se necessario */
+  white-space: pre-wrap; /* Mantiene gli spazi */
+}
+
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2rem; /* Dimensione del titolo per schermi piccoli */
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+      font-size: 1.5rem; /* Dimensione del sottotitolo per schermi piccoli */
+  }
+
+  h3 {
+      font-size: 1.3rem; /* Dimensione del titolo delle traduzioni per schermi piccoli */
+  }
+
+  button {
+      padding: 10px; /* Riduci il padding del bottone per schermi piccoli */
+     
   }
 }
+
+
